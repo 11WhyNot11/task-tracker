@@ -64,10 +64,10 @@ DELETE /api/comments/{id}
 - [x] 0.2 `application.yaml`: datasource, `ddl-auto: validate`, `open-in-view: false`, SQL-логи; перший запуск
 
 **Етап 1. User**
-- [ ] 1.1 `V1__create_users.sql`
-- [ ] 1.2 `Role`
-- [ ] 1.3 `User` entity
-- [ ] 1.4 `UserRepository`
+- [x] 1.1 `V1__create_users.sql`
+- [x] 1.2 `Role`
+- [x] 1.3 `User` entity
+- [x] 1.4 `UserRepository`
 
 **Етап 2. Project (повний CRUD-зріз)**
 - [ ] 2.1 `V2` міграція
