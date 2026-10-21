@@ -70,13 +70,13 @@ DELETE /api/comments/{id}
 - [x] 1.4 `UserRepository`
 
 **Етап 2. Project (повний CRUD-зріз)**
-- [ ] 2.1 `V2` міграція
-- [ ] 2.2 `Project`
-- [ ] 2.3 `ProjectRepository`
-- [ ] 2.4 DTO + валідація
-- [ ] 2.5 MapStruct + `ProjectMapper`
-- [ ] 2.6 `ProjectService`
-- [ ] 2.7 `ProjectController` (Pageable; поки власник береться з `X-User-Id`)
+- [x] 2.1 `V2` міграція
+- [x] 2.2 `Project`
+- [x] 2.3 `ProjectRepository`
+- [x] 2.4 DTO + валідація
+- [x] 2.5 MapStruct + `ProjectMapper`
+- [x] 2.6 `ProjectService`
+- [x] 2.7 `ProjectController` (Pageable; поки власник береться з `X-User-Id`)
 
 **Етап 3. Обробка помилок**
 - [ ] 3.1 Свої винятки
