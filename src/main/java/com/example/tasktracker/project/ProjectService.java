@@ -1,5 +1,6 @@
 package com.example.tasktracker.project;
 
+import com.example.tasktracker.common.exception.ResourceNotFoundException;
 import com.example.tasktracker.project.dto.ProjectRequest;
 import com.example.tasktracker.project.dto.ProjectResponse;
 import com.example.tasktracker.user.UserRepository;
@@ -8,8 +9,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.NoSuchElementException;
 
 @Service
 @RequiredArgsConstructor
@@ -25,7 +24,8 @@ public class ProjectService {
         Project project = new Project(
                 request.name(),
                 request.description(),
-                userRepository.getReferenceById(ownerId)
+                userRepository.findById(ownerId)
+                        .orElseThrow(() -> new ResourceNotFoundException("User", ownerId))
         );
 
         return projectMapper.toResponse(projectRepository.save(project));
@@ -55,7 +55,7 @@ public class ProjectService {
 
     private Project findOrThrow(Long id) {
         return projectRepository.findById(id)
-                .orElseThrow(() -> new NoSuchElementException("Project not found: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Project", id));
     }
 
 

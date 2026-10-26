@@ -79,8 +79,8 @@ DELETE /api/comments/{id}
 - [x] 2.7 `ProjectController` (Pageable; поки власник береться з `X-User-Id`)
 
 **Етап 3. Обробка помилок**
-- [ ] 3.1 Свої винятки
-- [ ] 3.2 `GlobalExceptionHandler`
+- [x] 3.1 Свої винятки
+- [x] 3.2 `GlobalExceptionHandler`
 
 **Етап 4. Task**
 - [ ] 4.1 `V3` міграція + індекси
